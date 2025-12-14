@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PESQUISA PARA REVENDEDORES - TOP LIFE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="logo-header">
+    <div class="logo-letras">
+      <img src="/assets/Logotipo_branco.png" alt="Logotipo TOP LIFE">
+    </div>
+  </div>
+
+  <main>
+    <div class="form-card">
+      <header class="form-header">
+        <h1>Pesquisa para Revendedores</h1>
+        <p class="form-subtitle">
+          Preencha o formulário abaixo para se tornar uma assistência
+          autorizada TOP LIFE
+        </p>
+      </header>
+
+      <form id="revendedorForm">
+        <div class="form-section">
+          <h3 class="section-title">Dados da Empresa</h3>
+
+          <div class="row-fields">
+            <div class="field-group">
+              <label>E-mail *</label>
+              <input type="email" name="email" placeholder="contato@empresa.com.br" required />
+            </div>
+            <div class="field-group">
+              <label>CNPJ *</label>
+              <input type="text" name="cnpj" placeholder="00.000.000/0000-00" required />
+            </div>
+          </div>
+
+          <label>Razão Social *</label>
+          <input type="text" name="razaoSocial" placeholder="Nome completo da empresa" required />
+
+          <label>Telefone (com DDD) *</label>
+          <input type="text" name="telefone" placeholder="(00) 00000-0000" required />
+        </div>
+
+        <div class="form-section">
+          <h3 class="section-title">Endereço</h3>
+
+          <label>CEP *</label>
+          <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000" required />
+
+          <label>Rua</label>
+          <input type="text" id="rua" name="logradouro" placeholder="Nome da rua" />
+
+          <label>Número</label>
+          <input type="text" name="numero" placeholder="123" />
+
+          <label>Bairro</label>
+          <input type="text" id="bairro" name="bairro" placeholder="Nome do bairro" />
+
+          <div class="row-fields">
+            <div class="field-group">
+              <label>Cidade</label>
+              <input type="text" id="cidade" name="cidade" placeholder="Cidade" />
+            </div>
+            <div class="field-group field-small">
+              <label>UF</label>
+              <input type="text" id="uf" name="uf" maxlength="2" placeholder="SP" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Campos ocultos para envio confiável no Chrome -->
+        <input type="hidden" name="logradouro_hidden" id="logradouro_hidden" />
+        <input type="hidden" name="bairro_hidden" id="bairro_hidden" />
+        <input type="hidden" name="cidade_hidden" id="cidade_hidden" />
+        <input type="hidden" name="uf_hidden" id="uf_hidden" />
+
+        <div class="form-section">
+          <h3 class="section-title">Perguntas sobre Serviços</h3>
+
+          <label>Você presta atendimento de assistência?</label>
+          <select name="atendimentoAssistencia">
+            <option value="sim">Sim</option>
+            <option value="não">Não</option>
+          </select>
+
+          <label>Faz serviço de refrigeração?</label>
+          <select name="servicoRefrigeracao">
+            <option value="sim">Sim</option>
+            <option value="não">Não</option>
+          </select>
+
+          <label>Faz parte elétrica e mecânica?</label>
+          <select name="parteEletricaMecanica">
+            <option value="sim">Sim</option>
+            <option value="não">Não</option>
+          </select>
+
+          <label>Tem interesse em ser assistência autorizada?</label>
+          <select name="interesseAutorizada">
+            <option value="sim">Sim</option>
+            <option value="não">Não</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn">Enviar formulário</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
